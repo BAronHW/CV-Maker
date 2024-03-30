@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import './assets/index.css';
 import Header from './Components/Header';
-import Preview from './Components/prev/Preview';
+// import Preview from './Components/prev/Preview';
 import PersonalData from './Components/PersonData';
 import Education from './Components/Education';
 import EducationPreview from "./Components/prev/EducationPreview";
@@ -33,7 +33,7 @@ function App() {
 
   const handlePersonalInfoChange = (e) => {
     const { name, value } = e.target;
-    console.log("name: "+ name + "value: "+value)
+    // console.log("name: "+ name + "value: "+value)
     setPersonalInfo(prevInfo => ({
       ...prevInfo,
       [name]: value,
@@ -52,11 +52,14 @@ function App() {
     });
   };
   
+  function alert(){
+    console.log("hi")
+  }
 
   return (
     <div className='main-container'>
       <div className='form-container'>
-        <Header autoFill={onautofill} name={"Aaron Wan"} />
+        <Header name={"Aaron Wan"}/>
         <PersonalData personalInfo={personalInfo} onInfoChange={handlePersonalInfoChange} />
         <Education personalInfo={personalInfo} onInfoChange={handlePersonalInfoChange}/>
         <Experiences personalInfo={personalInfo} onInfoChange={handlePersonalInfoChange}/>

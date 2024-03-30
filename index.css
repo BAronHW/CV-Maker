@@ -54,7 +54,7 @@ body {
 
 .header-top-half, .header-bottom-half {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: var(--spacing-md);
 }
 
@@ -117,12 +117,12 @@ body {
     /* border-radius: 1rem; */
 }
 
-.education-div{
+/* .education-div{
     background-color: var(--light-black);
     padding: 1rem;
     margin: 1rem;
     border-radius: 1rem;
-}
+} */
 
 .preview-name-div{
     display: flex;
@@ -180,3 +180,71 @@ body {
     margin-bottom: 5px;
     font-weight: bold;
   }
+  .education-div, .experience-div {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 1rem auto; /* Centering the div with automatic margins */
+    padding: 1rem; /* Padding inside the div */
+    background-color: var(--light-black); /* Dark theme background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.education-div input, .experience-div input {
+    margin-bottom: 10px; /* Space between inputs */
+    padding: 10px; /* Padding inside input fields for better text visibility */
+    font-size: 16px; /* Readable font size */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Slightly rounded borders for inputs */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+.education-div input:focus, .experience-div input:focus {
+    border-color: #4A90E2; /* Highlight focus with a blue border */
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.5); /* Blue glow effect */
+}
+
+.education-div label, .experience-div label {
+    margin-bottom: 5px; /* Space above the label */
+    font-weight: bold; /* Make labels bold */
+}
+
+.education-div, .experience-div, .Personal-Data {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 1rem auto; /* Centering the div with automatic margins */
+    padding: 1rem; /* Padding inside the div */
+    background-color: var(--light-black); /* Dark theme background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.education-div input, .experience-div input, .Personal-Data input {
+    margin-bottom: 10px; /* Space between inputs */
+    padding: 10px; /* Padding inside input fields for better text visibility */
+    font-size: 16px; /* Readable font size */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Slightly rounded borders for inputs */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+.education-div input:focus, .experience-div input:focus, .Personal-Data input:focus {
+    border-color: #4A90E2; /* Highlight focus with a blue border */
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.5); /* Blue glow effect */
+}
+
+/* Assuming you might add labels in the PersonalData component as well */
+.education-div label, .experience-div label, .Personal-Data label {
+    margin-bottom: 5px; /* Space above the label */
+    font-weight: bold; /* Make labels bold */
+}
+
+.education-preview-header, .experience-preview-header{
+    background-color: #213547;
+    display: flex;
+    justify-content: center;
+}
+
+
