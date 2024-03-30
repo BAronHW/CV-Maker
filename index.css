@@ -1,0 +1,182 @@
+:root {
+    --white: #fffbfb;
+    --grey: #f0eef1;
+    --black: #050505;
+    --light-black: #4D4847;
+    --red: #ff7070;
+    --light-green: #9fff9c;
+    --light-red: #ff9c9c;
+    --border-radius: 0.8rem;
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 40px;
+    --container-width: 1200px;
+    --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+body {
+    color: #F4FFF8;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: var(--grey);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-container, .preview-container {
+    background-color: var(--grey);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.form-container {
+    width: 35%;
+}
+
+.preview-container {
+    width: calc(65% - 2rem);
+    background-color: var(--white);
+}
+
+.header-container, .education-preview, .experience-preview, .preview-header, .Personal-Data {
+    background-color: var(--light-black);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    margin: var(--spacing-md);
+    box-shadow: var(--shadow);
+}
+
+.header-top-half, .header-bottom-half {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-md);
+}
+
+.header-bottom-half {
+    justify-content: center;
+}
+
+.header-top-buttons, .personal-data-names {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.autofill, .save-pdf {
+    appearance: none;
+    background-color: var(--black);
+    border: 2px solid #1A1A1A;
+    border-radius: var(--border-radius);
+    color: var(--white);
+    cursor: pointer;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    min-height: 60px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-align: center;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    width: 100%;
+}
+
+.autofill:hover, .save-pdf:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.autofill:active, .save-pdf:active, .autofill:disabled, .save-pdf:disabled {
+    box-shadow: none;
+    transform: translateY(0);
+    pointer-events: none;
+}
+
+.Personal-Data input[type="text"] {
+    padding: var(--spacing-sm);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    width: 100%;
+}
+
+.Personal-Data input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 123, 255, 0.6);
+    outline: 0;
+}
+.preview-name-div{
+    background-color: var(--light-black);
+    /* padding: 1rem;
+    margin: 1rem; */
+    /* border-radius: 1rem; */
+}
+
+.education-div{
+    background-color: var(--light-black);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.preview-name-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.name-div{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.name-div h3{
+    display: flex;
+    flex-direction: row;
+    margin:  0;
+}
+
+.general-info-div{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.experience-div {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: var(--light-black);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .experience-div input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+  }
+  
+  .experience-div input:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 2px rgba(74,144,226,0.5);
+  }
+  
+  .experience-div label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
